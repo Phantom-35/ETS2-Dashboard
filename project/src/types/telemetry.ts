@@ -1,0 +1,145 @@
+export interface TelemetryData {
+  game: {
+    connected: boolean;
+    gameName: string | null;
+    paused: boolean;
+    time: string;
+    timeScale: number;
+    nextRestStopTime: string;
+    version: string;
+    telemetryPluginVersion: string;
+  };
+  truck: {
+    id: string;
+    make: string;
+    model: string;
+    speed: number;
+    cruiseControlSpeed: number;
+    cruiseControlOn: boolean;
+    odometer: number;
+    gear: number;
+    displayedGear: number;
+    forwardGears: number;
+    reverseGears: number;
+    shifterType: string;
+    engineRpm: number;
+    engineRpmMax: number;
+    fuel: number;
+    fuelCapacity: number;
+    fuelAverageConsumption: number;
+    fuelWarningFactor: number;
+    fuelWarningOn: boolean;
+    wearEngine: number;
+    wearTransmission: number;
+    wearCabin: number;
+    wearChassis: number;
+    wearWheels: number;
+    userSteer: number;
+    userThrottle: number;
+    userBrake: number;
+    userClutch: number;
+    gameSteer: number;
+    gameThrottle: number;
+    gameBrake: number;
+    gameClutch: number;
+    shifterSlot: number;
+    engineOn: boolean;
+    electricOn: boolean;
+    wipersOn: boolean;
+    retarderBrake: number;
+    retarderStepCount: number;
+    parkBrakeOn: boolean;
+    motorBrakeOn: boolean;
+    brakeTemperature: number;
+    adblue: number;
+    adblueCapacity: number;
+    adblueAverageConsumption: number;
+    adblueWarningOn: boolean;
+    airPressure: number;
+    airPressureWarningOn: boolean;
+    airPressureWarningValue: number;
+    airPressureEmergencyOn: boolean;
+    airPressureEmergencyValue: number;
+    oilTemperature: number;
+    oilPressure: number;
+    oilPressureWarningOn: boolean;
+    oilPressureWarningValue: number;
+    waterTemperature: number;
+    waterTemperatureWarningOn: boolean;
+    waterTemperatureWarningValue: number;
+    batteryVoltage: number;
+    batteryVoltageWarningOn: boolean;
+    batteryVoltageWarningValue: number;
+    lightsDashboardValue: number;
+    lightsDashboardOn: boolean;
+    blinkerLeftActive: boolean;
+    blinkerRightActive: boolean;
+    blinkerLeftOn: boolean;
+    blinkerRightOn: boolean;
+    lightsParkingOn: boolean;
+    lightsBeamLowOn: boolean;
+    lightsBeamHighOn: boolean;
+    lightsAuxFrontOn: boolean;
+    lightsAuxRoofOn: boolean;
+    lightsBeaconOn: boolean;
+    lightsBrakeOn: boolean;
+    lightsReverseOn: boolean;
+    placement: {
+      x: number;
+      y: number;
+      z: number;
+      heading: number;
+      pitch: number;
+      roll: number;
+    };
+    acceleration: {
+      x: number;
+      y: number;
+      z: number;
+    };
+    head: {
+      x: number;
+      y: number;
+      z: number;
+    };
+    cabin: {
+      x: number;
+      y: number;
+      z: number;
+    };
+    hook: {
+      x: number;
+      y: number;
+      z: number;
+    };
+  };
+  trailer: {
+    attached: boolean;
+    id: string;
+    name: string;
+    mass: number;
+    wear: number;
+    placement: {
+      x: number;
+      y: number;
+      z: number;
+      heading: number;
+      pitch: number;
+      roll: number;
+    };
+  };
+  job: {
+    income: number;
+    deadlineTime: string;
+    remainingTime: string;
+    sourceCity: string;
+    sourceCompany: string;
+    destinationCity: string;
+    destinationCompany: string;
+  };
+  navigation: {
+    estimatedTime: string;
+    estimatedDistance: number;
+    speedLimit: number;
+  };
+}

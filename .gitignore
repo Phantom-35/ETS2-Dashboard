@@ -20,3 +20,7 @@ project/build/
 # OS
 Thumbs.db
 .DS_Store
+
+ets2-telemetry-server-3.2.5/
+
+*.tsbuildinfo
