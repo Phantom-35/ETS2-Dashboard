@@ -234,6 +234,90 @@ echo When you are finished, return here.
 echo.
 pause
 
+echo.
+echo ============================================================
+echo  Browser-Erweiterung erforderlich
+echo ============================================================
+echo.
+echo Das ETS2 Dashboard benoetigt eine CORS-Erweiterung,
+echo damit der Browser auf den Telemetry Server zugreifen kann.
+echo.
+echo Welchen Browser verwendest du?
+echo.
+echo   Chrome
+echo   Firefox
+echo   Opera
+echo   Edge
+echo.
+echo Bitte den Namen genau wie oben eingeben.
+echo.
+
+set /p "BROWSER=Browser: "
+
+if /I "%BROWSER%"=="Chrome" goto CORS_CHROME
+if /I "%BROWSER%"=="Firefox" goto CORS_FIREFOX
+if /I "%BROWSER%"=="Opera" goto CORS_OPERA
+if /I "%BROWSER%"=="Edge" goto CORS_EDGE
+
+echo.
+echo [ERROR] Unbekannter Browser.
+echo Bitte QuickStart erneut starten und Chrome, Firefox, Opera oder Edge eingeben.
+echo.
+pause
+exit /b 1
+
+
+:CORS_CHROME
+echo.
+echo Chrome ausgewaehlt.
+echo Oeffne die CORS-Erweiterung im Chrome Web Store...
+start "" "https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf"
+goto CORS_DONE
+
+
+:CORS_FIREFOX
+echo.
+echo Firefox ausgewaehlt.
+echo Oeffne die CORS-Erweiterung bei Firefox Add-ons...
+start "" "https://addons.mozilla.org/en-US/firefox/addon/access-control-allow-origin/"
+goto CORS_DONE
+
+
+:CORS_OPERA
+echo.
+echo Opera ausgewaehlt.
+echo Oeffne CORS Toggle bei Opera Add-ons...
+start "" "https://addons.opera.com/de/extensions/details/cors-toggle/"
+goto CORS_DONE
+
+
+:CORS_EDGE
+echo.
+echo Edge ausgewaehlt.
+echo Oeffne die CORS-Erweiterung bei Microsoft Edge Add-ons...
+start "" "https://microsoftedge.microsoft.com/addons/detail/allow-cors-accesscontro/bhjepjpgngghppolkjdhckmnfphffdag"
+goto CORS_DONE
+
+
+:CORS_DONE
+echo.
+echo ============================================================
+echo  Installation
+echo ============================================================
+echo.
+echo Der Installationsbereich wurde geoeffnet.
+echo.
+echo 1. Installiere die CORS-Erweiterung.
+echo 2. Aktiviere die Erweiterung im Browser.
+echo 3. Kehre anschliessend hierher zurueck.
+echo.
+echo Druecke ENTER, wenn du fertig bist.
+pause >nul
+
+echo.
+echo CORS-Erweiterung eingerichtet.
+echo.
+
 
 :: ========================================================
 :: FINISHED
