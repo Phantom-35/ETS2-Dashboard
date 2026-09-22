@@ -1,5 +1,22 @@
-node_modules/
-.env
-.env.local
-dist/
+# Old versions
+AlteVersionen/
+
+# Node
+project/node_modules/
+project/.npm/
+
+# Environment / secrets
+project/.env
+project/.env.*
+!.env.example
+
+# Build files
+project/dist/
+project/build/
+
+# Logs
 *.log
+
+# OS
+Thumbs.db
+.DS_Store
