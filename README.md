@@ -1,51 +1,33 @@
-# 🚛 ETS2 Dashboard
+# ETS2 Dashboard
 
-A modern web dashboard for **Euro Truck Simulator 2** with real-time telemetry and live vehicle data.
-
-The dashboard connects to the **ETS2 Telemetry Server** and displays information from your current drive in a clean, modern interface.
+A local dashboard for **Euro Truck Simulator 2** that displays telemetry data from the game in a browser.
 
 ---
 
-## ✨ Features
+## 📋 Requirements
 
-- 🚛 Real-time truck data
-- 📊 Live telemetry
-- 🏎️ Speed & RPM
-- ⛽ Fuel information
-- 🗺️ Trip information
-- 📈 Driving statistics
-- 💻 Modern responsive web interface
-- ⚡ One-click startup with `Start.bat`
+The following is required:
 
----
+- Windows 10 / 11
+- Euro Truck Simulator 2
+- Node.js and npm
+- A modern web browser:
+  - Google Chrome
+  - Mozilla Firefox
+  - Opera
+  - Microsoft Edge
+- Funbit ETS2 Telemetry Server
+- A CORS browser extension
 
-## 🛠️ Tech Stack
-
-### Dashboard
-
-- React
-- TypeScript
-- Tailwind CSS
-- Vite
-
-### Telemetry
-
-- [ETS2 Telemetry Server](https://github.com/Funbit/ets2-telemetry-server)
-- Euro Truck Simulator 2 telemetry data
+The Funbit Telemetry Server is automatically downloaded and prepared during the initial setup.
 
 ---
 
-## 📁 Project Structure
+## 🚀 Installation
 
-```text
-ETS2-Dashboard/
-│
-├── project/              # Web dashboard
-│   ├── src/
-│   ├── package.json
-│   └── ...
-│
-├── QuickStart.bat        # First-time setup
-├── Start.bat             # Start the dashboard
-├── .gitignore
-└── README.md
+### 1. Download the repository
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Phantom-35/ETS2-Dashboard.git
